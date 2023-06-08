@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {AiOutlineMinus, AiOutlinePlus} from 'react-icons/ai'
 
 const SingleQuestion = ({title, info}) => {
-    console.log(info);
+  const [showInfo, setShowInfo] = useState(false)
+
   return (
-    <h2>SingleQuestion</h2>
+
+   <article className='question'>
+       <header>
+           <h5>{title}</h5>
+           <p>{info}</p>
+       </header>
+   </article>
   )
 }
 
