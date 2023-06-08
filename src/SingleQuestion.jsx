@@ -2,15 +2,15 @@ import React, { useState } from 'react'
 import {AiOutlineMinus, AiOutlinePlus} from 'react-icons/ai'
 
 const SingleQuestion = ({title, info}) => {
-  const [showInfo, setShowInfo] = useState(false)
+  const [showInfo, setShowInfo] = useState(true)
 
   return (
 
    <article className='question'>
        <header>
            <h5>{title}</h5>
-           <p>{info}</p>
-       </header>
+        </header>
+           {showInfo && <p>{info}</p>}   
    </article>
   )
 }
